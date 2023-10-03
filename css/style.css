@@ -1,0 +1,245 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Trocchi:regular);
+@import url(https://fonts.googleapis.com/css?family=Forum:regular);
+@import url(https://fonts.googleapis.com/css?family=Halant:500,700);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-style: 100%;
+  line-height: 1;
+  font-style: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+/*
+
+	$fz:16px; ПРИМЕР СОЗДАНИЕ ПЕРЕМЕННОЙ
+
+	%tplborder{
+		border-bottom: 5px dashed red;
+} ПРИМЕР СОЗДАНИЯ ШАБЛОНА СТИЛЕЙ
+
+	div{
+		@extend %tplborder;
+} ПРИМЕР ПОДКЛЮЧЕНИЯ
+
+	@mixin fontz($f, $c){
+		font-size: $f;
+		color: $c;
+	} ПРИМЕР СОЗДАНИЯ МИКСИНА
+
+	div{
+		@include fontz(50px, #000);
+	} ПРИМЕР ПРИМИНЕНИЯ
+
+*/
+/*--------------------------------------------------------*/
+body {
+  font-family: Trocchi;
+  color: #12484A;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 1364px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+/*----------------------------HEADER----------------------------*/
+.header {
+  background-color: #EFDECD;
+}
+.header .header__container {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.header .header__inner {
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  max-width: 65px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 79px;
+  margin-left: 84px;
+}
+.menu__list .menu__list-link {
+  color: #12484A;
+  position: relative;
+}
+.menu__list .menu__list-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #12484A;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.menu__list .menu__list-link:hover::after {
+  content: "";
+  width: 100%;
+  left: 0;
+}
+
+.header__language-option {
+  margin-left: auto;
+  cursor: pointer;
+  position: relative;
+}
+.header__language-option::after {
+  position: absolute;
+  content: url(/images/icons/language-after.svg);
+}
+
+.header__user-link {
+  margin-left: 25px;
+}
+
+/*----------------------------MAIN----------------------------*/
+.furry-pets-info {
+  text-align: center;
+  color: #EFDECD;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.furry-pets-info .info__inner {
+  background-color: rgba(18, 72, 74, 0.6);
+}
+.furry-pets-info .info__inner .info__container {
+  padding-top: 232px;
+  padding-bottom: 341px;
+}
+
+.info__title {
+  font-size: 128px;
+  letter-spacing: 47.36px;
+  text-transform: uppercase;
+  color: rgba(1, 1, 1, 0);
+  -webkit-text-stroke: 2px #EFDECD;
+}
+
+.info__text {
+  max-width: 490px;
+  margin: 0 auto;
+  padding: 41px 5px 55px;
+  font-size: 24px;
+  text-transform: lowercase;
+}
+
+.info__button {
+  color: #12484A;
+  font-size: 24px;
+  padding: 11px 25px;
+  background-color: #EFDECD;
+  border: 1px solid #12484A;
+  border-radius: 20px;
+  max-width: 138px;
+  width: 100%;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 auto;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.info__button:hover {
+  background-color: rgba(239, 222, 205, 0.7);
+  border: 1px solid #EFDECD;
+}
