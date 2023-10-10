@@ -184,9 +184,6 @@ body{
 			background-color: rgba($color: $main-green, $alpha: .3);
 		}
 
-		&__container {
-		}
-
 		&__title {
 			text-transform: uppercase;
 			font-size: 38px;
@@ -228,8 +225,7 @@ body{
 			padding-bottom: 10px;
 		}
 
-		&__text {
-		}
+
 
 		&__list {
 			flex: 1 1 auto;
