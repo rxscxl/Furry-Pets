@@ -322,3 +322,52 @@ body{
 
 /*----------------------------FOOTER----------------------------*/
 
+.footer {
+	background-color:rgba($color: $main-white, $alpha: .7);
+	box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+
+	&__wrapper {
+		padding: 11px 15px 5px;
+	}
+
+	&__container {
+		padding: 5px 143px;
+	}
+
+	&__subtext {
+		padding: 3px 195px;
+		font-family: Forum;
+		font-size: 16px;
+		color: rgba($color: $main-green, $alpha: .5);
+	}
+}
+.footer-inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer-list {
+
+	&__menu {
+		padding-left: 49px;
+		display: flex;
+		gap: 59px;
+	}
+
+	&__menu-link {
+		color: $main-green;
+		text-transform: uppercase;
+		font-size: 14px;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
+.footer-list-icons {
+	&__menu {
+		display: flex;
+		gap: 32px;
+		padding-left: 77px;
+	}
+}

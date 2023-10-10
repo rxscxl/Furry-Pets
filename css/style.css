@@ -382,3 +382,56 @@ body {
 }
 
 /*----------------------------FOOTER----------------------------*/
+.footer {
+  background-color: rgba(239, 222, 205, 0.7);
+  -webkit-box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.footer__wrapper {
+  padding: 11px 15px 5px;
+}
+.footer__container {
+  padding: 5px 143px;
+}
+.footer__subtext {
+  padding: 3px 195px;
+  font-family: Forum;
+  font-size: 16px;
+  color: rgba(18, 72, 74, 0.5);
+}
+
+.footer-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-list__menu {
+  padding-left: 49px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 59px;
+}
+.footer-list__menu-link {
+  color: #12484A;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.footer-list__menu-link:hover {
+  text-decoration: underline;
+}
+
+.footer-list-icons__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  padding-left: 77px;
+}
