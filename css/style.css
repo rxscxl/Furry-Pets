@@ -147,6 +147,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
+  z-index: 50;
 }
 .header .header__container {
   padding-top: 9px;
@@ -447,4 +448,24 @@ body {
 }
 .footer-list-icons__menu-icon:hover {
   opacity: 1;
+}
+
+.footer-list-icons__menu-item {
+  position: relative;
+}
+.footer-list-icons__menu-item::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: -10px;
+  left: -8px;
+  border: 1px solid #12484A;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.footer-list-icons__menu-item:hover::before {
+  opacity: 0.9;
 }

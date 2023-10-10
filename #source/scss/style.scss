@@ -75,6 +75,7 @@ body{
 	left: 0;
 	top: 0;
 	width: 100%;
+	z-index: 50;
 
 	.header__container{
 		padding-top: 9px;
@@ -378,9 +379,29 @@ body{
 
 .footer-list-icons__menu-icon{
 	opacity: 0.8;
-		transition: 0.6s;
+	transition: 0.6s;
 
 		&:hover{
 			opacity: 1;
 		}
+}
+
+.footer-list-icons__menu-item{
+	position: relative;
+
+	&::before{
+		position: absolute;
+		content: "";
+		height: 40px;
+		width: 40px;
+		top: -10px;
+		left: -8px;
+		border: 1px solid $main-green;
+		border-radius: 50%;
+		opacity: 0;
+		transition: .3s;
+	}
+	&:hover::before{
+		opacity: .9;
+	}
 }
