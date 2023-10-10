@@ -435,11 +435,12 @@ body {
   gap: 32px;
   padding-left: 77px;
 }
-.footer-list-icons__menu-item {
+
+.footer-list-icons__menu-icon {
   opacity: 0.7;
   -webkit-transition: 0.6s;
   transition: 0.6s;
 }
-.footer-list-icons__menu-item:hover {
+.footer-list-icons__menu-icon:hover {
   opacity: 1;
 }

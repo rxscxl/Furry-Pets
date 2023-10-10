@@ -370,12 +370,13 @@ body{
 		gap: 32px;
 		padding-left: 77px;
 	}
-	&__menu-item{
-		opacity: 0.7;
+}
+
+.footer-list-icons__menu-icon{
+	opacity: 0.7;
 		transition: 0.6s;
 
 		&:hover{
 			opacity: 1;
 		}
-	}
 }
