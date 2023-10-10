@@ -193,6 +193,7 @@ body {
 }
 
 /*----------------------------MAIN----------------------------*/
+/*----------------------------INFO----------------------------*/
 .furry-pets-info {
   text-align: center;
   color: #EFDECD;
@@ -200,10 +201,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.furry-pets-info .info__inner {
+.furry-pets-info .info__wrapper {
   background-color: rgba(18, 72, 74, 0.6);
 }
-.furry-pets-info .info__inner .info__container {
+.furry-pets-info .info__wrapper .info__container {
   padding-top: 232px;
   padding-bottom: 341px;
 }
@@ -228,7 +229,7 @@ body {
   color: #12484A;
   font-size: 24px;
   padding: 11px 25px;
-  background-color: #EFDECD;
+  background-color: rgba(239, 222, 205, 0.8);
   border: 1px solid #12484A;
   border-radius: 20px;
   max-width: 138px;
@@ -240,6 +241,111 @@ body {
   transition: 0.6s;
 }
 .info__button:hover {
-  background-color: rgba(239, 222, 205, 0.7);
-  border: 1px solid #EFDECD;
+  background-color: #efdecd;
+}
+
+/*----------------------------SUB-PLANS----------------------------*/
+.sub-plans__wrapper {
+  background-color: rgba(18, 72, 74, 0.3);
+}
+.sub-plans__title {
+  text-transform: uppercase;
+  font-size: 38px;
+  text-align: center;
+  padding: 38px 15px 18px;
+}
+.sub-plans__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 77px;
+  padding-top: 18px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.sub-plans__column {
+  max-width: 343px;
+  background-color: #12484A;
+  color: #EFDECD;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 25px 45px 30px;
+}
+
+.plans-column {
+  font-family: Forum;
+  line-height: 150%;
+  font-size: 18px;
+  border-radius: 30px;
+  -webkit-box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+  min-height: 600px;
+  height: 100%;
+}
+.plans-column__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Trocchi;
+  font-size: 28px;
+  line-height: normal;
+  padding-bottom: 10px;
+}
+.plans-column__list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  padding-left: 25px;
+  padding-bottom: 18px;
+}
+.plans-column__list-item {
+  position: relative;
+}
+.plans-column__list-item::before {
+  position: absolute;
+  content: "";
+  height: 2.5px;
+  width: 2.5px;
+  top: 12.5px;
+  left: -20px;
+  background-color: #EFDECD;
+}
+.plans-column__button {
+  text-align: center;
+  padding: 13px 42px;
+  background-color: rgba(239, 222, 205, 0.8);
+  text-transform: uppercase;
+  color: #12484A;
+  font-family: Trocchi;
+  font-size: 20px;
+  border-radius: 20px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.plans-column__button:hover {
+  background-color: #efdecd;
+}
+
+.plans-column-middle {
+  min-height: 640px;
+  background-color: #EFDECD;
+  color: #12484A;
+}
+.plans-column-middle .plans-column__list-item::before {
+  background-color: #12484A;
+}
+.plans-column-middle .plans-column__button {
+  color: #EFDECD;
+  background-color: rgba(18, 72, 74, 0.9);
+}
+.plans-column-middle .plans-column__button:hover {
+  background-color: #12484a;
 }

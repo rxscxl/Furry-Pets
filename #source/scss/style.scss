@@ -27,11 +27,14 @@
 
 */
 
+$main-green:#12484A;
+$main-white: #EFDECD;
+
 /*--------------------------------------------------------*/
 
 body{
 	font-family: Trocchi;
-	color: #12484A;
+	color: $main-green;
 	font-size: 16px;
 	line-height: normal;
 }
@@ -56,7 +59,7 @@ body{
 /*----------------------------HEADER----------------------------*/
 
 .header{
-	background-color: #EFDECD;
+	background-color: $main-white;
 
 	.header__container{
 		padding-top: 9px;
@@ -78,7 +81,7 @@ body{
 	margin-left: 84px;
 
 	.menu__list-link {
-		color: #12484A;
+		color: $main-green;
 
 		position: relative;
 
@@ -86,7 +89,7 @@ body{
 			content: "";
 			height: 2px;
 			width: 0;
-			background-color: #12484A;
+			background-color: $main-green;
 			position: absolute;
 			bottom: -2px;
 			right: 0;
@@ -119,16 +122,18 @@ body{
 
 
 /*----------------------------MAIN----------------------------*/
+/*----------------------------INFO----------------------------*/
+
 
 .furry-pets-info {
 	text-align: center;
-	color: #EFDECD;
+	color: $main-white;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	.info__inner{
-		background-color: rgba($color: #12484A, $alpha: .6);
+	.info__wrapper{
+		background-color: rgba($color: $main-green, $alpha: .6);
 	
 		.info__container{
 			padding-top: 232px;
@@ -142,7 +147,7 @@ body{
 	letter-spacing: 47.36px;
 	text-transform: uppercase;
 	color: rgba(1, 1, 1, 0);
-	-webkit-text-stroke: 2px #EFDECD;
+	-webkit-text-stroke: 2px $main-white;
 }
 
 .info__text {
@@ -156,8 +161,8 @@ body{
 	color: #12484A;
 	font-size: 24px;
 	padding: 11px 25px;
-	background-color: #EFDECD;
-	border: 1px solid #12484A;
+	background-color: rgba($color: $main-white, $alpha: .8);
+	border: 1px solid $main-green;
 	border-radius: 20px;
 	max-width: 138px;
 	width: 100%;
@@ -167,7 +172,117 @@ body{
 	transition: 0.6s;
 
 	&:hover{
-		background-color: rgba($color: #EFDECD, $alpha: .7);
-		border: 1px solid #EFDECD;
+		background-color: rgba($color: $main-white, $alpha: 1);
+	}
+}
+
+/*----------------------------SUB-PLANS----------------------------*/
+
+	.sub-plans {
+
+		&__wrapper {
+			background-color: rgba($color: $main-green, $alpha: .3);
+		}
+
+		&__container {
+		}
+
+		&__title {
+			text-transform: uppercase;
+			font-size: 38px;
+			text-align: center;
+			padding: 38px 15px 18px;
+		}
+
+		&__row {
+			display: flex;
+			justify-content: center;
+			gap: 77px;
+			padding-top: 18px;
+			align-items: flex-end;
+		}
+
+		&__column {
+			max-width: 343px;
+			background-color: $main-green;
+			color: $main-white;
+			display: flex;
+			flex-direction: column;
+			padding: 25px 45px 30px;
+		}
+}
+.plans-column {
+	font-family: Forum;
+	line-height: 150%;font-size: 18px;
+	border-radius: 30px;
+	box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+	min-height: 600px;
+	height: 100%;
+	
+		&__title {
+			text-align: center;
+			text-transform: uppercase;
+			font-family: Trocchi;
+			font-size: 28px;
+			line-height: normal;
+			padding-bottom: 10px;
+		}
+
+		&__text {
+		}
+
+		&__list {
+			flex: 1 1 auto;
+			padding-left: 25px;
+			padding-bottom: 18px;
+		}
+
+		&__list-item {
+			position: relative;
+			&::before{
+				position: absolute;
+				content: "";
+				height: 2.5px;
+				width: 2.5px;
+				top: 12.5px;
+				left: -20px;
+				background-color: $main-white;
+			}
+		}
+
+		&__button {
+			text-align: center;
+			padding: 13px 42px;
+			background-color: rgba($color: $main-white, $alpha: .8);
+			text-transform: uppercase;
+			color: $main-green;
+			font-family: Trocchi;
+			font-size: 20px;
+			border-radius: 20px;
+			transition: .6s;
+
+			&:hover{
+				background-color: rgba($color: $main-white, $alpha: 1);
+			}
+		}
+}
+.plans-column-middle{
+	min-height: 640px;
+	background-color: $main-white;
+	color: $main-green;
+
+	.plans-column__list-item {
+		&::before{
+			background-color: $main-green;
+		}
+	}
+
+	.plans-column__button{
+		color: $main-white;
+		background-color: rgba($color: $main-green, $alpha: .9);
+
+		&:hover{
+			background-color: rgba($color: $main-green, $alpha: 1);
+		}
 	}
 }
