@@ -361,9 +361,23 @@ body{
 		color: $main-green;
 		text-transform: uppercase;
 		font-size: 14px;
+		position: relative;
 
-		&:hover{
-			text-decoration: underline;
+		&::after {
+			content: "";
+			height: 2px;
+			width: 0;
+			background-color: $main-green;
+			position: absolute;
+			bottom: -2px;
+			right: 0;
+			transition: 0.3s;
+		}
+
+		&:hover::after {
+			content: "";
+			width: 100%;
+			left: 0;
 		}
 	}
 }

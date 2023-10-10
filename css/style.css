@@ -426,9 +426,23 @@ body {
   color: #12484A;
   text-transform: uppercase;
   font-size: 14px;
+  position: relative;
 }
-.footer-list__menu-link:hover {
-  text-decoration: underline;
+.footer-list__menu-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #12484A;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.footer-list__menu-link:hover::after {
+  content: "";
+  width: 100%;
+  left: 0;
 }
 
 .footer-list-icons__menu {
