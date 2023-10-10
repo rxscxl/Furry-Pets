@@ -143,6 +143,10 @@ body {
 /*----------------------------HEADER----------------------------*/
 .header {
   background-color: #EFDECD;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 .header .header__container {
   padding-top: 9px;
