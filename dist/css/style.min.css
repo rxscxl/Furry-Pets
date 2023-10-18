@@ -1,0 +1,468 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Trocchi:regular);
+@import url(https://fonts.googleapis.com/css?family=Forum:regular);
+@import url(https://fonts.googleapis.com/css?family=Halant:500,700);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-style: 100%;
+  line-height: 1;
+  font-style: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+/*
+@font-face {
+	font-family: CormorantUpright;
+	font-display: swap;
+	src: url("../fonts/CormorantUpright-Bold.woff2") format("woff2"), url("../fonts/CormorantUpright-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+*/
+/*------------------------------------------------------------------------*/
+/*
+
+	$fz:16px; ПРИМЕР СОЗДАНИЕ ПЕРЕМЕННОЙ
+
+	%tplborder{
+		border-bottom: 5px dashed red;
+} ПРИМЕР СОЗДАНИЯ ШАБЛОНА СТИЛЕЙ
+
+	div{
+		@extend %tplborder;
+} ПРИМЕР ПОДКЛЮЧЕНИЯ
+
+	@mixin fontz($f, $c){
+		font-size: $f;
+		color: $c;
+	} ПРИМЕР СОЗДАНИЯ МИКСИНА
+
+	div{
+		@include fontz(50px, #000);
+	} ПРИМЕР ПРИМИНЕНИЯ
+
+*/
+/*------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------*/
+body {
+  font-family: Trocchi;
+  color: #12484A;
+  font-size: 16px;
+  line-height: normal;
+  background-color: #EFDECD;
+  transition: 0.3s;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class*=__container] {
+  max-width: 1364px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+.btn {
+  text-align: center;
+  padding: 13px 42px;
+  background-color: rgba(239, 222, 205, 0.7);
+  text-transform: uppercase;
+  color: #12484A;
+  border-radius: 20px;
+  font-size: 20px;
+  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+/*----------------------------HEADER----------------------------*/
+.header {
+  background-color: #EFDECD;
+  left: 0;
+  top: -86px;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+.header .header__container {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.header .header__inner {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.header.fixed {
+  position: fixed;
+  transform: translateY(86px);
+  opacity: 0.9;
+  transition: 0.3s;
+}
+.header.fixed:hover {
+  opacity: 1;
+}
+
+.header__logo {
+  max-width: 65px;
+}
+
+.menu__list {
+  display: flex;
+  gap: 79px;
+  margin-left: 84px;
+}
+.menu__list .menu__list-link {
+  color: #12484A;
+  position: relative;
+}
+.menu__list .menu__list-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #12484A;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  transition: 0.3s;
+}
+.menu__list .menu__list-link:hover::after {
+  content: "";
+  width: 100%;
+  left: 0;
+}
+
+.header__language-option {
+  margin-left: auto;
+  cursor: pointer;
+  position: relative;
+}
+.header__language-option::after {
+  position: absolute;
+  content: url(../img/icons/language-after.svg);
+  transition: 0.1s;
+}
+.header__language-option:hover::after {
+  transform: rotate(180deg);
+}
+
+.header__user-link {
+  margin-left: 25px;
+}
+
+/*----------------------------MAIN----------------------------*/
+/*----------------------------INFO----------------------------*/
+.furry-pets-info {
+  text-align: center;
+  color: #EFDECD;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.furry-pets-info .info__wrapper {
+  background-color: rgba(18, 72, 74, 0.6);
+}
+.furry-pets-info .info__wrapper .info__container {
+  padding-top: 232px;
+  padding-bottom: 341px;
+}
+
+.info__title {
+  font-size: 128px;
+  letter-spacing: 47.5px;
+  text-transform: uppercase;
+  color: rgba(1, 1, 1, 0);
+  -webkit-text-stroke: 2px #EFDECD;
+}
+
+.info__text {
+  max-width: 490px;
+  margin: 0 auto;
+  padding: 41px 5px 55px;
+  font-size: 24px;
+  text-transform: lowercase;
+}
+
+.info__button {
+  color: #12484A;
+  font-size: 24px;
+  padding: 11px 25px;
+  border: 1px solid #12484A;
+  margin: 0 auto;
+  transition: 0.6s;
+  background-color: rgba(239, 222, 205, 0.9);
+}
+.info__button:hover {
+  background-color: #efdecd;
+  letter-spacing: 4px;
+}
+
+/*----------------------------SUB-PLANS----------------------------*/
+.sub-plans__wrapper {
+  background-color: rgba(18, 72, 74, 0.3);
+}
+.sub-plans__title {
+  text-transform: uppercase;
+  font-size: 38px;
+  text-align: center;
+  padding: 38px 15px 18px;
+}
+.sub-plans__row {
+  display: flex;
+  justify-content: center;
+  gap: 77px;
+  padding-top: 18px;
+  align-items: flex-end;
+}
+.sub-plans__column {
+  max-width: 343px;
+  background-color: #12484A;
+  color: #EFDECD;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 45px 30px;
+}
+.sub-plans .sub-plans-join__wrapper {
+  text-align: center;
+  padding: 84px 15px;
+}
+.sub-plans .sub-plans-join__title {
+  font-family: Trocchi;
+  font-size: 38px;
+  text-transform: uppercase;
+  padding-bottom: 27px;
+}
+.sub-plans .sub-plans-join__text {
+  margin: 0 auto;
+  max-width: 300px;
+  font-family: Forum;
+  font-size: 16px;
+  padding-bottom: 40px;
+}
+.sub-plans .sub-plans-join__button {
+  border: 1px solid #12484A;
+  background-color: rgba(239, 222, 205, 0.7);
+  transition: 0.6s;
+}
+.sub-plans .sub-plans-join__button:hover {
+  background-color: #efdecd;
+  letter-spacing: 4px;
+}
+
+.plans-column {
+  font-family: Forum;
+  line-height: 150%;
+  font-size: 18px;
+  border-radius: 30px;
+  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+  min-height: 600px;
+  height: 100%;
+}
+.plans-column__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Trocchi;
+  font-size: 28px;
+  line-height: normal;
+  padding-bottom: 10px;
+}
+.plans-column__list {
+  flex: 1 1 auto;
+  padding-left: 25px;
+  padding-bottom: 18px;
+}
+.plans-column__list-item {
+  position: relative;
+}
+.plans-column__list-item::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 3px;
+  top: 12.5px;
+  left: -20px;
+  background-color: #EFDECD;
+}
+.plans-column__button {
+  color: #12484A;
+  font-family: Trocchi;
+  font-size: 20px;
+  transition: 0.6s;
+}
+.plans-column__button:hover {
+  background-color: #efdecd;
+}
+
+.plans-column-middle {
+  min-height: 640px;
+  background-color: #EFDECD;
+  color: #12484A;
+}
+.plans-column-middle .plans-column__list-item::before {
+  background-color: #12484A;
+}
+.plans-column-middle .plans-column__button {
+  color: #EFDECD;
+  background-color: rgba(18, 72, 74, 0.9);
+}
+.plans-column-middle .plans-column__button:hover {
+  background-color: #12484a;
+}
+
+/*----------------------------FOOTER----------------------------*/
+.footer {
+  background-color: rgba(239, 222, 205, 0.7);
+  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.footer__wrapper {
+  padding: 11px 15px 5px;
+}
+.footer__container {
+  padding: 5px 143px;
+}
+.footer__subtext {
+  padding: 3px 195px;
+  font-family: Forum;
+  font-size: 16px;
+  color: rgba(18, 72, 74, 0.5);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-list__menu {
+  padding-left: 49px;
+  display: flex;
+  gap: 59px;
+}
+.footer-list__menu-link {
+  color: #12484A;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+}
+.footer-list__menu-link::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #12484A;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  transition: 0.3s;
+}
+.footer-list__menu-link:hover::after {
+  content: "";
+  width: 100%;
+  left: 0;
+}
+
+.footer-list-icons__menu {
+  display: flex;
+  gap: 32px;
+  padding-left: 77px;
+}
+
+.footer-list-icons__menu-icon {
+  opacity: 0.8;
+  transition: 0.6s;
+}
+.footer-list-icons__menu-icon:hover {
+  opacity: 1;
+}
+
+.footer-list-icons__menu-item {
+  position: relative;
+  z-index: 2;
+}
+.footer-list-icons__menu-item::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  top: -10px;
+  left: -8px;
+  border: 1px solid #12484A;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.3s;
+}
+.footer-list-icons__menu-item:hover::before {
+  opacity: 0.9;
+}
