@@ -225,12 +225,15 @@ body {
 
 /*----------------------------MAIN----------------------------*/
 /*----------------------------INFO----------------------------*/
-.furry-pets-info {
-  text-align: center;
-  color: #EFDECD;
+.furry-bg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.furry-pets-info {
+  text-align: center;
+  color: #EFDECD;
 }
 .furry-pets-info .info__wrapper {
   background-color: rgba(18, 72, 74, 0.6);
@@ -465,4 +468,282 @@ body {
 }
 .footer-list-icons__menu-item:hover::before {
   opacity: 0.9;
+}
+
+.calendar__wrapper {
+  background-color: rgba(18, 72, 74, 0.6);
+  padding: 50px;
+}
+
+.calendar__inner {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.calendar {
+  height: max-content;
+  width: max-content;
+  border-radius: 30px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  font-family: Forum;
+  font-size: 32px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 25px;
+  color: #EFDECD;
+  padding: 10px;
+}
+
+.calendar-body {
+  padding: 10px;
+}
+
+.calendar-week-day {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 32px;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.calendar-week-day div {
+  display: grid;
+  place-items: center;
+  color: #EFDECD;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  color: #EFDECD;
+}
+
+.calendar-days div {
+  width: 82px;
+  height: 77px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: relative;
+  cursor: pointer;
+  animation: to-top 1s forwards;
+  /* border-radius: 50%; */
+}
+
+.calendar-days div.curr-date {
+  background-color: #9CD2D6;
+}
+
+.calendar-days div.curr-date span {
+  display: none;
+}
+
+/*--------------------------*/
+.calendar-day-day {
+  background-color: #EFDECD;
+  color: #12484A;
+  transition: 0.3s;
+}
+.calendar-day-day:hover {
+  color: #EFDECD;
+  background-color: #12484A;
+}
+
+/*--------------------------*/
+.month-picker {
+  padding: 5px 10px;
+  font-size: 36px;
+  cursor: pointer;
+  position: relative;
+}
+.month-picker::after {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #EFDECD;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  transition: 0.3s;
+}
+.month-picker:hover::after {
+  content: "";
+  width: 100%;
+  left: 0;
+}
+
+.year-picker {
+  display: flex;
+  align-items: center;
+  font-size: 36px;
+}
+
+.year-change {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.year-change {
+  position: relative;
+  transition: 0.3s;
+}
+.year-change::after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid #EFDECD;
+  bottom: -1px;
+  opacity: 0%;
+}
+.year-change:hover::after {
+  opacity: 100%;
+}
+
+.month-list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #EFDECD;
+  padding: 20px;
+  grid-template-columns: repeat(3, auto);
+  gap: 5px;
+  display: grid;
+  transform: scale(1.5);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.month-list.show {
+  transform: scale(1);
+  visibility: visible;
+  pointer-events: visible;
+  transition: all 0.2s ease-in-out;
+}
+
+.month-list > div {
+  display: grid;
+  place-items: center;
+}
+
+.month-list > div > div {
+  width: 100%;
+  padding: 5px 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  color: #12484A;
+}
+.month-list > div > div:hover {
+  color: #EFDECD;
+  background-color: #12484A;
+}
+
+@keyframes to-top {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.active {
+  background-color: rgba(239, 222, 205, 0.7);
+}
+
+/*----------------------------NOTES----------------------------*/
+.calendar-notes {
+  padding-top: 95px;
+  padding-bottom: 50px;
+  font-family: Forum;
+  font-size: 16px;
+}
+
+#selected-date {
+  font-size: 32px;
+  text-transform: uppercase;
+  padding-bottom: 22px;
+  text-align: center;
+}
+
+.calendar-notes__inner {
+  border-radius: 20px;
+  background-color: #EFDECD;
+  padding: 23px 20px 23px;
+  max-height: 410px;
+  height: 100%;
+}
+
+.calendar-form__group {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 13px;
+  position: relative;
+}
+
+.calendar-form__label {
+  color: #7A7A7A;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.calendar-form__input {
+  font-family: Forum;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  transition: 0.3s;
+  height: 53px;
+  max-width: 146px;
+}
+.calendar-form__input textarea {
+  padding: 20px;
+}
+
+#calendar-form-btn {
+  font-family: Trocchi;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #EFDECD;
+  background-color: #12484A;
+  padding: 8px 30px;
+  border-radius: 20px;
+  transition: 0.3s;
+  border: none;
+  outline: none;
+}
+#calendar-form-btn:hover {
+  background-color: rgba(239, 222, 205, 0.6);
+  color: #12484A;
+  border: 1px solid #12484A;
+  box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.calendar-form-notes {
+  padding-bottom: 30px;
 }

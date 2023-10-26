@@ -12,12 +12,14 @@
 		<header class="header js-header">
 	<div class="header__container">
 		<div class="header__inner">
-			<a href="" class="logo">
+			<a href="../index.html" class="logo">
 				<img class="logo__img" src="img/logo.png" alt="LogoType">
 			</a>
 			<nav class="menu">
 				<ul class="menu__list">
 					<li class="menu__list-item"><a href="" class="menu__list-link">Petbrary</a></li>
+					<li class="menu__list-item"><a href="../calendar.html" class="menu__list-link">Calendar</a></li>
+					<li class="menu__list-item"><a href="" class="menu__list-link">History</a></li>
 					<li class="menu__list-item"><a href="" class="menu__list-link">Contact us</a></li>
 				</ul>
 			</nav>
@@ -31,13 +33,77 @@
 
 		<main class="main">
 			
+			<section style="background-image: url(img/pets-bg.jpg)" class="furry-pets-calendar furry-bg">
+				<div class="calendar__wrapper">
+					<div class="calendar__container">
+						<div class="calendar__inner">
+							<div class="calendar">
+								<div class="calendar-header">
+									<span class="month-picker" id="month-picker">February</span>
+									<div class="year-picker">
+										<span class="year-change" id="prev-year">
+												<pre><</pre>
+										</span>
+										<span id="year">2021</span>
+										<span class="year-change" id="next-year">
+												<pre>></pre>
+										</span>
+									</div>
+								</div>
+								<div class="calendar-body">
+									<div class="calendar-week-day">
+										<div>S</div>
+										<div>M</div>
+										<div>T</div>
+										<div>W</div>
+										<div>T</div>
+										<div>F</div>
+										<div>S</div>
+									</div>
+									<div class="calendar-days"></div>
+								</div>
+								<div class="month-list"></div>
+						</div>
+					
+		
+						<div class="calendar-notes">
+							<form class="calendar-notes__inner">
+								
+								<h2 id="selected-date">Selected Date</h2>
+								
+								<div class="calendar-form__group">
+									<div class="calendar-form__group-info">
+										<input class="calendar-form__input">
+									</div>
+	
+									<div class="calendar-form__group-info">
+										<input class="calendar-form__input">
+									</div>
+								</div>
+
+								<div class="calendar-form-notes">
+									<textarea class="calendar-form__input"></textarea>
+								</div>
+
+								<div class="btn-container">
+									<button id="calendar-form-btn">
+										SAVE
+									</button>
+								</div>
+
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
 		</main>
 
 		<footer class="footer">
 	<div class="footer__wrapper">
 		<div class="footer__container">
 			<div class="footer-inner">
-				<a href="#"><img src="img/logo.png" alt="LogoType"></a>
+				<a href="../index.html"><img src="img/logo.png" alt="LogoType"></a>
 				<ul class="footer-list__menu">
 					<li class="footer-list__menu-item">
 						<a href="#" class="footer-list__menu-link">Services</a>
